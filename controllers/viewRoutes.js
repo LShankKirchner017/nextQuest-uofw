@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, List } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -11,7 +11,7 @@ router.get('/', withAuth, async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
 
-    res.render('homepage', {
+    res.render('home', {
       users,
       logged_in: req.session.logged_in,
     });
@@ -28,5 +28,27 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+// router.get('/', async (req, res) => {
+//   try {
+//     const gameLists = await List.findAll({
+//       raw: true
+//     })
+//     res.render('home', { list })
+//   } catch(err) {
+//     res.status(500).json(err)
+//   }
+// });
+// router.get('/lists/:id', async (req, res) => {
+//   try{
+//     const list = await List.findByPk(req.params.id, {
+//       include: [  {model: User} ],
+//       raw:true,
+//     })
+//     res.render('list', list)
+//   } catch(err) {
+//       res.status(500).json(err)
+//   }
+// })
 
 module.exports = router;
