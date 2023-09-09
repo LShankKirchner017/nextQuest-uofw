@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { User, List } = require('../models');
+const { raw } = require('express');
+const { User, Gamelist } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -29,26 +30,42 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// router.get('/', async (req, res) => {
-//   try {
-//     const gameLists = await List.findAll({
-//       raw: true
-//     })
-//     res.render('home', { list })
-//   } catch(err) {
-//     res.status(500).json(err)
-//   }
-// });
-// router.get('/lists/:id', async (req, res) => {
-//   try{
-//     const list = await List.findByPk(req.params.id, {
-//       include: [  {model: User} ],
-//       raw:true,
-//     })
-//     res.render('list', list)
-//   } catch(err) {
-//       res.status(500).json(err)
-//   }
-// })
+router.get('/', async (req, res) => {
+  try {
+    const gameLists = await Gamelist.findAll({
+      raw: true
+    })
+    res.render('home', { gamelist })
+  } catch(err) {
+    res.status(500).json(err)
+  }
+});
+router.get('/gamelists/:id', async (req, res) => {
+  try{
+    const gameList = await Gamelist.findByPk(req.params.id, {
+      include: [  {model: User} ],
+      raw:true,
+    })
+    res.render('gamelist', gamelist)
+  } catch(err) {
+      res.status(500).json(err)
+  }
+})
+
+router.get('/profile', async(req, res) => {
+  const user_id = req.session.user_id
+  if(!user_id) {
+    res.redirect('/login')
+  }
+  try {
+    const user = await User.findByPk(user_id, {raw: true})
+
+    res.render('profile', user)
+  } catch(err) {
+    res.status(500).json(err)
+  }
+})
+
+
 
 module.exports = router;
