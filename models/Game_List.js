@@ -1,7 +1,10 @@
-const { Model, DataTypes, BOOLEAN } = require('sequelize')
+const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../config/connection')
 
-List.init({
+
+class Game_List extends Model{}
+
+Game_List.init({
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
@@ -31,7 +34,7 @@ List.init({
   timestamps: false,
   freezeTableName: true,
   underscored: true,
-  modelName: "gameList",
+  modelName: "Game_List",
 	}
 );
 
