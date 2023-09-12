@@ -34,6 +34,10 @@ User.init(
       validate: {
         len: [8],
       },
+    twitch: {
+      type: DataTypes.STRING,
+      allowNull: true
+    }
     },
   },
   {

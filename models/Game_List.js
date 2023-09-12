@@ -25,11 +25,23 @@ Game_List.init(
       allowNull: true,
     },
     length: {
-      type: DataTypes.DECIMAL(4, 2),
+      type: DataTypes.STRING,
       allowNull: true,
     },
     is_priority: {
       type: DataTypes.BOOLEAN,
+    },
+     date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+      },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
   },
   {
