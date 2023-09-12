@@ -31,6 +31,13 @@ Game_List.init(
     is_priority: {
       type: DataTypes.BOOLEAN,
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
