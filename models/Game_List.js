@@ -31,6 +31,11 @@ Game_List.init(
     is_priority: {
       type: DataTypes.BOOLEAN,
     },
+     date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+      },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
