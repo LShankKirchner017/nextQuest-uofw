@@ -1,8 +1,7 @@
-const { Model, DataTypes } = require('sequelize')
-const sequelize = require('../config/connection')
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
-
-class Game_List extends Model{}
+class Game_List extends Model {}
 
 Game_List.init(
   {
@@ -25,32 +24,31 @@ Game_List.init(
       allowNull: true,
     },
     length: {
-      type: DataTypes.DECIMAL(4, 2),
+      type: DataTypes.STRING,
       allowNull: true,
     },
     is_priority: {
       type: DataTypes.BOOLEAN,
     },
-     date_created: {
+    date_created: {
       type: DataTypes.DATE,
-      allowNull: false,
       defaultValue: DataTypes.NOW,
-      },
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id',
+        model: "user",
+        key: "id",
       },
     },
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: "Game_List",
   }
 );
 
-module.exports = Game_List
+module.exports = Game_List;
