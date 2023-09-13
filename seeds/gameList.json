@@ -1,34 +1,30 @@
 [
-    {
-        "game": "Kingdom Hearts 3",
-        "genre": "RPG",
-        "difficulty": "",
-        "length": "64 hours",
-        "is_priority": true,
-        "date_created": "" 
-    },
-    {
-      "game": "God of War: Ragnarok",
-      "genre": "Action",
-      "difficulty": "",
-      "length": "54 hours",
-      "is_priority": false,
-      "date_created": ""
-    },
-    {
-      "game": "Stray",
-      "genre": "Adventure",
-      "difficulty": "",
-      "length": "10 hours",
-      "is_priority": false,
-      "date_created": ""
-    },
-    {
-      "game": "The Last of Us",
-      "genre": "Action",
-      "difficulty": "",
-      "length": "30 hours",
-      "is_priority": false,
-      "date_created": ""
-    }
+  {
+    "game": "Kingdom Hearts 3",
+    "genre": "RPG",
+    "difficulty": "easy",
+    "length": "64 hours",
+    "is_priority": true
+  },
+  {
+    "game": "God of War: Ragnarok",
+    "genre": "Action",
+    "difficulty": "easy",
+    "length": "54 hours",
+    "is_priority": false
+  },
+  {
+    "game": "Stray",
+    "genre": "Adventure",
+    "difficulty": "easy",
+    "length": "10 hours",
+    "is_priority": false
+  },
+  {
+    "game": "The Last of Us",
+    "genre": "Action",
+    "difficulty": "easy",
+    "length": "30 hours",
+    "is_priority": false
+  }
 ]
