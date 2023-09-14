@@ -38,4 +38,8 @@ router.get('/new-list', (req,res) => {
   })
 })
 
+router.get('/user-profile', (req,res) => {
+  res.render('userProfile')
+})
+
 module.exports = router;
