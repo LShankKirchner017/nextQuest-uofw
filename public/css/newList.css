@@ -1,0 +1,10 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'MedievalSharp', cursive;
+}
+
+body {
+    background-image: url('https://img.freepik.com/free-photo/person-facing-purgatory-world-illustration_456031-40.jpg?w=1480&t=st=1694666171~exp=1694666771~hmac=5712fd63cb3dee13a7c59e0ac775922e90b1ffa3defeb61b14fd1d6a5e1e6dd2');
+    background-size: cover; /* Adjust to your preference */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This keeps the background fixed while scrolling */
+}
