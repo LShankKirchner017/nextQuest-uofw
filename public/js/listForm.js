@@ -1,5 +1,3 @@
-
-
 const form = document.querySelector("form")
 const gameInput = document.getElementById("game")
 const genreInput = document.getElementById("genre");

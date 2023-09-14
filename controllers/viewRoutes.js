@@ -33,4 +33,8 @@ router.get('/new-list', (req,res) => {
   res.render('newList')
 })
 
+router.get('/user-profile', (req,res) => {
+  res.render('userProfile')
+})
+
 module.exports = router;
