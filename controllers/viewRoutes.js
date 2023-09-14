@@ -14,6 +14,7 @@ router.get('/', withAuth, async (req, res) => {
     res.render('homepage', {
       users,
       logged_in: req.session.logged_in,
+      style: 'homePage.css',
     });
   } catch (err) {
     res.status(500).json(err);
@@ -26,11 +27,15 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('login', {
+    style: 'login.css',
+  });
 });
 
 router.get('/new-list', (req,res) => {
-  res.render('newList')
+  res.render('newList', {
+    style: 'newList.css',
+  })
 })
 
 module.exports = router;
