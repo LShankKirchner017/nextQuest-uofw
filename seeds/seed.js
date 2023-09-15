@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const sequelize = require("../config/connection");
 const { User, Game_List } = require("../models");
 
@@ -10,6 +12,7 @@ const seedDatabase = async () => {
   await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
+    raw: true,
   });
 
   await Game_List.bulkCreate(gameList, {
