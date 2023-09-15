@@ -12,13 +12,14 @@ function handleSubmit(e){
         password: passwordInput.value,
     }
 
-    fetch("/api/user", {
+    fetch("/api/signup", {
         method: "post",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(userData)
     })
+    console.log(userData)
     .then((response) => {
         if (response.status === 200) {
             location.assign('/')
