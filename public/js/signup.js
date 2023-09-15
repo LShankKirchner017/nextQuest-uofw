@@ -4,7 +4,7 @@ const emailInput = document.getElementById("email-signup")
 const passwordInput = document.getElementById("password-signup")
 
 
-function handleSubmit(e){
+async function handleSubmit(e){
     e.preventDefault()
     const userData = {
         name: nameInput.value, 
@@ -12,7 +12,7 @@ function handleSubmit(e){
         password: passwordInput.value,
     }
 
-    fetch("/api/signup", {
+    await fetch("/api/users", {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -20,9 +20,8 @@ function handleSubmit(e){
         body: JSON.stringify(userData)
     })
     .then((response) => {
-        if (response.status === 200) {
-            location.assign('/')
-        }
+            window.location.assign('/')
+        
     })
     .catch((err) => console.log(err))
 }

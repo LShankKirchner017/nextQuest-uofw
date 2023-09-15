@@ -43,7 +43,7 @@ router.post('/logout', (req, res) => {
   }
 });
 
-router.post('/api/signup', async (req,res) => {
+router.post('/', async (req,res) => {
   try {
     const signup = await User.create(req.body)
     res.status(201).json(signup)
