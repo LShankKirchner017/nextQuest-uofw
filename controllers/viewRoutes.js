@@ -42,4 +42,8 @@ router.get('/user-profile', (req,res) => {
   res.render('userProfile')
 })
 
+router.get('/sign-up', (req, res) => {
+  res.render('signup')
+})
+
 module.exports = router;
