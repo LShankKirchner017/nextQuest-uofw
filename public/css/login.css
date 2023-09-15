@@ -1,5 +1,8 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'MedievalSharp', cursive;
+    text-align: center;
+    color: #7D0000;
+    margin-top: 60px;
 }
 body {
     background-image: url('https://img.freepik.com/free-vector/old-nautical-map-template_225004-981.jpg?w=2000');
