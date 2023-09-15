@@ -19,7 +19,6 @@ function handleSubmit(e){
         },
         body: JSON.stringify(userData)
     })
-    console.log(userData)
     .then((response) => {
         if (response.status === 200) {
             location.assign('/')

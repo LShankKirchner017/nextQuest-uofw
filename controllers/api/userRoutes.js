@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 router.post('/login', async (req, res) => {
-  console.log("Why......")
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
@@ -43,5 +42,15 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+router.post('/api/signup', async (req,res) => {
+  try {
+    const signup = await User.create(req.body)
+    res.status(201).json(signup)
+  } catch(err) {
+    console.log(err)
+    res.status(500).json(err)
+  }
+})
 
 module.exports = router;
