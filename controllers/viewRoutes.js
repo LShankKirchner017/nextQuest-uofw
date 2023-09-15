@@ -46,4 +46,8 @@ router.get('/sign-up', (req, res) => {
   res.render('signup')
 })
 
+router.get('/game-list', (req, res) => {
+  res.render('gameList')
+})
+
 module.exports = router;
