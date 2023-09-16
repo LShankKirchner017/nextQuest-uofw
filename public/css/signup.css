@@ -1,0 +1,12 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'MedievalSharp', cursive;
+}
+h1 {
+    opacity: 0;
+}
+body {
+    background-image: url('../images/chess.jpg');
+    background-size: 1510px; /* Adjust to your preference */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This keeps the background fixed while scrolling */
+}

@@ -39,15 +39,21 @@ router.get('/new-list', (req,res) => {
 })
 
 router.get('/user-profile', (req,res) => {
-  res.render('userProfile')
+  res.render('userProfile', {
+    style: 'profile.css',
+  })
 })
 
 router.get('/sign-up', (req, res) => {
-  res.render('signup')
+  res.render('signup', {
+    style: 'signup.css',
+  })
 })
 
 router.get('/game-list', (req, res) => {
-  res.render('gameList')
+  res.render('gameList', {
+    style: 'newList.css'
+  })
 })
 
 module.exports = router;

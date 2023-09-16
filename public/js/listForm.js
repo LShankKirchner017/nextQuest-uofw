@@ -26,9 +26,10 @@ function handleSubmit(e){
     })
     .then ((response)=> {
         if (response.status === 200){
-            location.assign('/')
+            location.assign('/user-profile')
         }
     })
     .catch((err)=> console.log(err))
 }
 form.addEventListener("submit", handleSubmit)
+
