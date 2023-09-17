@@ -9,4 +9,5 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed; /* This keeps the background fixed while scrolling */
     font-family: 'Figtree', sans-serif;
+    color: aliceblue;
 }
