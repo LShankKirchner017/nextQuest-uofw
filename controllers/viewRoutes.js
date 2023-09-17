@@ -50,4 +50,8 @@ router.get('/game-list', (req, res) => {
   res.render('gameList')
 })
 
+router.get("/create-profile", (req, res) => {
+  res.render("createProfile");
+});
+
 module.exports = router;
