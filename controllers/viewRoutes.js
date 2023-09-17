@@ -11,10 +11,11 @@ router.get('/', withAuth, async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
 
+    console.log(req.session)
+
     res.render('homepage', {
-      users,
-      logged_in: req.session.logged_in,
-      style: 'homePage.css',
+      user: req.session.user,
+      style: 'homePage',
     });
   } catch (err) {
     res.status(500).json(err);
@@ -28,13 +29,13 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login', {
-    style: 'login.css',
+    style: 'login',
   });
 });
 
 router.get('/new-list', (req,res) => {
   res.render('newList', {
-    style: 'newList.css',
+    style: 'newList',
   })
 })
 
