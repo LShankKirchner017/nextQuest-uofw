@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Game_List } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] },
@@ -42,12 +42,13 @@ router.get('/new-list', (req,res) => {
 router.get('/user-profile', withAuth, async (req,res) => {
   let user = await User.findByPk(req.session.user.id, {
     // TODO include gameList (array of game lists)
+    include: [{model: Game_List}]
   })
   user = user.get({
     plain: true
   })
   console.log(user)
-  res.render('userProfile', user)
+  res.render('userProfile', {user, style: 'profile'})
 })
 
 router.get('/sign-up', (req, res) => {
