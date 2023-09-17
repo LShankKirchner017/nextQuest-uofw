@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] },
@@ -39,7 +39,7 @@ router.get('/new-list', (req,res) => {
   })
 })
 
-router.get('/user-profile', async (req,res) => {
+router.get('/user-profile', withAuth, async (req,res) => {
   let user = await User.findByPk(req.session.user.id, {
     // TODO include gameList (array of game lists)
   })
