@@ -1,39 +1,46 @@
-{{!-- <div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
 
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
-  <div class="col-md-6"> --}}
-    <h2 class="text-danger">Signup</h2>
+    <h2>Signup</h2>
 
     <form class="form signup-form text-danger lead">
       <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" name="name-signup" />
+        <label for="name-signup">User Name:</label>
+        <input class="form-input" type="text" id="name-signup" name="name-signup" required/>
       </div>
       <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" name="email-signup" />
+        <label for="email-signup">E-mail:</label>
+        <input class="form-input" type="text" id="email-signup" name="email-signup" required/>
       </div>
       <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" name="password-signup" />
+        <label for="password-signup">Password:</label>
+        <input class="form-input" type="password" id="password-signup" name="password-signup" required/>
       </div>
+
+  <div class="form-group">
+        <label for="twitch-signup">Twitch: </label>
+        <input class="form-input" type="text" id="twitch-signup" name="twitch-signup" />
+      </div>
+
+
+        <div class="form-group">
+        <label for="location-signup">Location: </label>
+        <input class="form-input" type="text" id="location-signup" name="location-signup" />
+      </div>
+
+
+        <div class="form-group">
+        <label for="bio-signup">About Me: </label>
+        <textarea class="form-input" id="bio-signup" name="bio-signup"></textarea>
+      </div>
+
       <div class="form-group">
-        <button class="btn btn-success" type="submit">Create Account</button>
+        <button
+          class="btn btn-success"
+          style="
+            background-color: purple;
+            color: white;
+            font-family: 'MedievalSharp', cursive;"
+          type="submit"
+        >Begin the Adventure</button>
       </div>
     </form>
   </div>

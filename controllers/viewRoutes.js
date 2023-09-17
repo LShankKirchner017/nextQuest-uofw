@@ -11,10 +11,11 @@ router.get('/', withAuth, async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
 
+    console.log(req.session)
+
     res.render('homepage', {
-      users,
-      logged_in: req.session.logged_in,
-      style: 'homePage.css',
+      user: req.session.user,
+      style: 'homePage',
     });
   } catch (err) {
     res.status(500).json(err);
@@ -28,20 +29,25 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login', {
-    style: 'login.css',
+    style: 'login',
   });
 });
 
 router.get('/new-list', (req,res) => {
   res.render('newList', {
-    style: 'newList.css',
+    style: 'newList',
   })
 })
 
-router.get('/user-profile', (req,res) => {
-  res.render('userProfile', {
-    style: 'profile.css',
+router.get('/user-profile', async (req,res) => {
+  let user = await User.findByPk(req.session.user.id, {
+    // TODO include gameList (array of game lists)
   })
+  user = user.get({
+    plain: true
+  })
+  console.log(user)
+  res.render('userProfile', user)
 })
 
 router.get('/sign-up', (req, res) => {
@@ -51,9 +57,10 @@ router.get('/sign-up', (req, res) => {
 })
 
 router.get('/game-list', (req, res) => {
-  res.render('gameList', {
-    style: 'newList.css'
-  })
+  res.render('gameList')
+  // TODO render in gamelist by ID
 })
+
+
 
 module.exports = router;
