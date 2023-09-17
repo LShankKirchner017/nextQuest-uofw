@@ -39,22 +39,25 @@ router.get('/new-list', (req,res) => {
   })
 })
 
-router.get('/user-profile', (req,res) => {
-  res.render('userProfile')
+router.get('/user-profile', async (req,res) => {
+  let user = await User.findByPk(req.session.user.id, {
+    // TODO include gameList (array of game lists)
+  })
+  user = user.get({
+    plain: true
+  })
+  console.log(user)
+  res.render('userProfile', user)
 })
 
 router.get('/sign-up', (req, res) => {
   res.render('signup')
 })
 
-router.get('/game-list', (req, res) => {
+router.get('/game-list/:id', (req, res) => {
   res.render('gameList')
 })
 
-
-router.get('/create-profile', (req,res) => {
-  res.render('createProfile')
-})
 
 
 module.exports = router;

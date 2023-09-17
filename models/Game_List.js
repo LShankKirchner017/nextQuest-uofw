@@ -42,6 +42,15 @@ Game_List.init(
       },
     },
   },
+  // {
+  //   hooks: {
+  //     beforeValidate: function(Game_List) {
+  //       Game_List.slug = Game_List.game.split(' ').join('-').toLowerCase()
+  //       return Game_List
+  //     }
+  //   }
+
+  // },
   {
     sequelize,
     timestamps: true,

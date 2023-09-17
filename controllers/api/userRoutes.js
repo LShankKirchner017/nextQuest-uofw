@@ -44,22 +44,27 @@ router.post('/logout', (req, res) => {
 
 router.post('/', async (req,res) => {
   try {
-    const signup = await User.create(req.body)
-    res.status(201).json(signup)
-  } catch(err) {
+    const newUser = await User.create(req.body)
+    
+    req.session.save(() => {
+      req.session.user = newUser;
+      res.status(201).json(newUser)
+    });
+  } 
+  catch(err) {
     console.log(err)
     res.status(500).json(err)
   }
-})
-
-router.post('/', async (req, res) => {
-  try {
-    const createProfile = await User.create(req.body);
-    res.status(201).json(createProfile);
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
 });
+
+// router.post('/', async (req, res) => {
+//   try {
+//     const createProfile = await User.create(req.body);
+//     res.status(201).json(createProfile);
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;
