@@ -8,10 +8,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 body {
     background-image: url('../images/dragon3.jpg');
-    background-size: 1505px; /* Adjust to your preference */
+    background-size: cover; /* Adjust to your preference */
     background-repeat: no-repeat;
     background-attachment: fixed; /* This keeps the background fixed while scrolling */
     font-family: 'Figtree', sans-serif;
     color: aliceblue;
 }
-
