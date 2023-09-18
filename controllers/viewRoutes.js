@@ -56,7 +56,7 @@ router.get('/sign-up', (req, res) => {
 
 router.get('/game-list', (req, res) => {
   res.render('gameList')
-  // TODO render in gamelist by ID
+  
 })
 
 
