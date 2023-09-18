@@ -37,3 +37,21 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now listening @ http://localhost:${PORT}`));
 });
+
+// const mysql = require('mysql2')
+// const connection = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'root321',
+//   database: 'gamer_db'
+// })
+
+
+// connection.query(
+//   'SELECT * FROM game_list',
+//   function(err, results, fields) {
+//     console.log(err)
+//     console.log(results)
+//     console.log(fields)
+//   }
+// )

@@ -1,11 +1,15 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'MedievalSharp', cursive;
+<<<<<<< HEAD
+    opacity: 0;
+=======
     color: purple;
+>>>>>>> 5804a513a41114162214e1cb2dc7ebf4f46e5e8c
 }
 
 body {
-    background-image: url('../images/underwater.jpg');
-    background-size: cover; /* Adjust to your preference */
+    background-image: url('../images/swords2.jpg');
+    background-size: 1500px; /* Adjust to your preference */
     background-repeat: no-repeat;
     background-attachment: fixed; /* This keeps the background fixed while scrolling */
     font-family: 'Figtree', sans-serif;
