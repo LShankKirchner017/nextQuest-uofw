@@ -57,9 +57,14 @@ router.get('/sign-up', (req, res) => {
   })
 })
 
-router.get('/game-list', (req, res) => {
-  res.render('gameList')
-  // TODO render in gamelist by ID
+router.get('/game-list/:id', async (req, res) => {
+  const listId = req.params.id
+  let game = await Game_List.findByPk(listId)
+  game = game.get({
+    plain: true
+  })
+  console.log(game)
+  res.render('gameList', game)
 })
 
 

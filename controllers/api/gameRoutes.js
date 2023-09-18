@@ -6,7 +6,7 @@ router.post('/', withAuth, async (req, res) => {
     try {
         const newGamelist = await Game_List.create({
             ...req.body,
-            user_id: req.session.user_id,
+            user_id: req.session.user.id,
         })
 
         res.status(200).json(newGamelist)
