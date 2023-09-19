@@ -1,6 +1,7 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'MedievalSharp', cursive;
     /* opacity: 0; */
+    text-shadow: 4px 4px 8px rgba(70, 70, 70, 0.954);;
 }
 
 body {
