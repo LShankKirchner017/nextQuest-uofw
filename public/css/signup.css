@@ -6,7 +6,7 @@ h1 {
 }
 body {
     background-image: url('../images/chess.jpg');
-    background-size: 1510px; /* Adjust to your preference */
+    background-size: cover; /* Adjust to your preference */
     background-repeat: no-repeat;
     background-attachment: fixed; /* This keeps the background fixed while scrolling */
 }
