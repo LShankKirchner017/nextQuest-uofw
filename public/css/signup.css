@@ -5,8 +5,6 @@ h1 {
     opacity: 0;
 }
 body {
-    background-image: url('../images/chess.jpg');
-    background-size: cover; /* Adjust to your preference */
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* This keeps the background fixed while scrolling */
+    background: url('../images/chess.jpg') no-repeat center fixed;
+    background-size: cover;
 }
