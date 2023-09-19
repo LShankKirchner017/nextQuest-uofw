@@ -2,9 +2,6 @@
 
 A game tracker for the busy video or table-top role playing gamer!
 
-## Screenshots
-
-
 ## Repository Link
 https://github.com/LShankKirchner017/nextQuest-uofw 
 
@@ -72,7 +69,17 @@ Heroku
 
 ## Resources Used 
 ```
-All photos sourced from pexles.com under their terms of use
+All app photos sourced from pexles.com under their terms of use
+
+```
+## Screenshots
+![Login](<public/screenshots/login screenshot.png>)
+![Homepage](<public/screenshots/homepage screenshot.png>)
+![User Profile](<public/screenshots/userprofile screenshot.png>)
+![List Create](<public/screenshots/listcreate screenshot.png>)
+![Created List](<public/screenshots/created list screenshot.png>)
+![User Profile with created list](<public/screenshots/userprofile with list screenshot.png>)
+
 
 
 
