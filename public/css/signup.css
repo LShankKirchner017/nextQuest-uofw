@@ -1,8 +1,11 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'MedievalSharp', cursive;
     color: black;
+    text-shadow: 4px 4px 8px rgba(70, 70, 70, 0.954);;
 }
-
+h1 {
+    
+}
 body {
     background: url(https://img.freepik.com/premium-vector/retro-open-book-with-blank-pages_135176-524.jpg) no-repeat center fixed;
     background-size: cover;
