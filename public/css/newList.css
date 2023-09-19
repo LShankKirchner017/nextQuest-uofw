@@ -1,10 +1,6 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'MedievalSharp', cursive;
-<<<<<<< HEAD
-    opacity: 0;
-=======
-    color: purple;
->>>>>>> 5804a513a41114162214e1cb2dc7ebf4f46e5e8c
+    color: black;
 }
 
 body {

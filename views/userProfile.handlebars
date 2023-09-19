@@ -15,7 +15,7 @@
 
   <div class="col-lg-8">
     {{#each user.Game_Lists as |game|}}
-<div class="card mb-4">
+    <div class="card mb-4">
       <div class="card-body text-center">
         <h5 class="my-3"> <a href="/game-list/{{game.id}}">Title: {{ game.game }}</a></h5>
         <p class="text-muted mb-1">Genre: {{ game.genre }}</p>
@@ -23,6 +23,10 @@
         <p class="text-muted mb-4">Length: {{ game.length }}</p>
         <p class="text-muted mb-4">Priority: {{ game.is_priority }}</p>
       </div>
+    </div>
+
+    <div>
+     <a href="/new-list" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">New Game</a>
     </div>
     {{/each}}
   </div>
