@@ -1,13 +1,10 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'MedievalSharp', cursive;
-    color: goldenrod;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.954);;
-    
+    /* opacity: 0; */
+    text-shadow: 4px 4px 8px rgba(70, 70, 70, 0.954);;
 }
 
 body {
-    background: url('../images/swords2.jpg') no-repeat center fixed;
+    background: url('../images/castle5.jpg') no-repeat center fixed;
     background-size: cover;
-    font-family: 'Figtree', sans-serif;
-    color: aliceblue;
 }
