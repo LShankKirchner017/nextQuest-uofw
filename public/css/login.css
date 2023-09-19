@@ -3,6 +3,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: #7D0000;
     margin-top: 60px;
+    text-shadow: 4px 4px 8px rgba(70, 70, 70, 0.954);;
 }
 body {
     background: url('https://img.freepik.com/free-vector/old-nautical-map-template_225004-981.jpg?w=2000') no-repeat center fixed;

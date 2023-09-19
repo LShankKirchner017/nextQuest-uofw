@@ -2,7 +2,8 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'MedievalSharp', cursive;
-    color: purple;
+    color: orange;
+    text-shadow: 2px 2px 6px rgba(110, 110, 110, 0.954), 6px 6px 8px rgba(181, 27, 0, 0.954) ;;
     
     
 }
