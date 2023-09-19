@@ -5,10 +5,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 60px;
 }
 body {
-    background-image: url('https://img.freepik.com/free-vector/old-nautical-map-template_225004-981.jpg?w=2000');
-    background-size: cover; /* Adjust to your preference */
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* This keeps the background fixed while scrolling */
+    background: url('https://img.freepik.com/free-vector/old-nautical-map-template_225004-981.jpg?w=2000') no-repeat center fixed;
+    background-size: cover;
     font-family: 'Figtree', sans-serif;
 }
 
