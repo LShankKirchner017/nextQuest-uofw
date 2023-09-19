@@ -53,7 +53,7 @@ router.get('/user-profile', withAuth, async (req,res) => {
 
 router.get('/sign-up', (req, res) => {
   res.render('signup', {
-    style: 'signup.css',
+    style: 'signup',
   })
 })
 
